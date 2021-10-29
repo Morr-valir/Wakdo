@@ -1,0 +1,21 @@
+#Interface{
+    .content{
+        padding: 0 5px;
+        h1{font-family:$fontruluko;
+            b{
+                font-family: $fontrumraisin;
+                font-size: 32px;
+            }
+        }
+        h2{
+            font-family:$fontrumraisin;
+        }
+        .list-food{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin:35px 0;
+            justify-content: flex-start;
+        }
+    }
+}

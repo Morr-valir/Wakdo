@@ -1,0 +1,95 @@
+//Import des fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Ruluko&family=Rum+Raisin&display=swap');
+$fontroboto:'Roboto', sans-serif;
+$fontruluko:'Ruluko', sans-serif;
+$fontrumraisin:'Rum Raisin', sans-serif;
+//Variables couleurs
+$colorpromo:#FF1D25;
+$colorarticle:#F4F4F4;
+$colorbutton:#FFCA40;
+
+//Structure app
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+#app{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: whitesmoke;
+    #Interface{
+        display: flex;
+        flex-wrap: nowrap;
+        max-width: 414px;
+        width: 100%;
+        height: 100vh;
+        background: white;
+        .produits{
+            display: flex;
+            max-width: 283px;
+            width: 283px;
+            padding: 10px;
+            flex-direction: column;
+        }
+        .command{
+            max-width: 131px;
+            width: 100%;
+            background:$colorarticle;
+        }
+    }
+}
+.food{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 20px;
+    font-family:$fontroboto;
+    font-size: 14px;
+    width: 100px;
+    height: 100px;
+    background:$colorarticle;
+    text-align: center;
+    &.promo{
+        background:$colorpromo;
+        color: white;
+    }
+    &.pop{
+        width: 110px;
+        height: 110px;
+        background: transparent;
+        p{color:$colorbutton;font-size: 14px;}
+    }
+    &.select{
+        border: 2px solid #1575c1;
+    }
+    p{font-size: 12px;}
+    .quantity{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        gap:5px;
+        button{
+            border:none;
+            color: black;
+            background:$colorbutton;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2px 5px;
+            border-radius: 5px
+        }
+    }
+}
+button{
+    font-family:$fontroboto;
+}
+//Import module app
+@import 'header';
+@import 'content';
+@import 'aside';
+//Element réutilisable

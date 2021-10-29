@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Ruluko&family=Rum+Raisin&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: whitesmoke;
+}
+
+#app #Interface {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  max-width: 414px;
+  width: 100%;
+  height: 100vh;
+  background: white;
+}
+
+#app #Interface .produits {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 283px;
+  width: 283px;
+  padding: 10px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#app #Interface .command {
+  max-width: 131px;
+  width: 100%;
+  background: #F4F4F4;
+}
+
+.food {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px;
+  border-radius: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  width: 100px;
+  height: 100px;
+  background: #F4F4F4;
+  text-align: center;
+}
+
+.food.promo {
+  background: #FF1D25;
+  color: white;
+}
+
+.food.pop {
+  width: 110px;
+  height: 110px;
+  background: transparent;
+}
+
+.food.pop p {
+  color: #FFCA40;
+  font-size: 14px;
+}
+
+.food.select {
+  border: 2px solid #1575c1;
+}
+
+.food p {
+  font-size: 12px;
+}
+
+.food .quantity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10px;
+  gap: 5px;
+}
+
+.food .quantity button {
+  border: none;
+  color: black;
+  background: #FFCA40;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+
+button {
+  font-family: "Roboto", sans-serif;
+}
+
+#Interface .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 0 30px 15px;
+}
+
+#Interface .content {
+  padding: 0 5px;
+}
+
+#Interface .content h1 {
+  font-family: "Ruluko", sans-serif;
+}
+
+#Interface .content h1 b {
+  font-family: "Rum Raisin", sans-serif;
+  font-size: 32px;
+}
+
+#Interface .content h2 {
+  font-family: "Rum Raisin", sans-serif;
+}
+
+#Interface .content .list-food {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 25px;
+  margin: 35px 0;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+#Interface .command {
+  padding: 10px;
+}
+
+#Interface .command .header-command {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 0 50px 0;
+}
+
+#Interface .command .header-command .btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #181818;
+}
+
+#Interface .command .content-command h3 {
+  font-family: "Ruluko", sans-serif;
+}
+
+#Interface .command .content-command h3 b {
+  font-family: "Rum Raisin", sans-serif;
+}
+
+#Interface .command .content-command .exit {
+  border: none;
+  color: #afafaf;
+  background: none;
+}
+
+#Interface .command .content-command hr {
+  margin: 20px 0;
+}
+
+#Interface .command .content-command .article-command {
+  max-height: 530px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 65px;
+}
+
+#Interface .command .total {
+  margin-top: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#Interface .command .total hr {
+  margin: 20px 0;
+}
+
+#Interface .command .total h4 {
+  font-family: "Ruluko", sans-serif;
+  font-size: 12px;
+}
+
+#Interface .command .total p {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  color: black;
+  margin: 15px;
+}
+
+#Interface .command .total button {
+  border: none;
+  color: black;
+  background: #FFCA40;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 15px;
+  border-radius: 10px;
+}
+/*# sourceMappingURL=global.css.map */
