@@ -72,6 +72,7 @@
   height: 100px;
   background: #F4F4F4;
   text-align: center;
+  cursor: pointer;
 }
 
 .food.promo {

@@ -20,78 +20,28 @@
                     <section class="content">
                         <h1><b>Hey,</b><br>Comment ça va ?</h1>
                         <div class="list-food">
-                            <article class="food promo">
+                            <article class="food"
+                            v-for="(Produit,index) in Produits.slice(0, 6)":key="Produit.id"
+                            :class="{promo : Produit.active}"
+                            @click="Produit.active = !Produit.active"
+                            >
                                 <figure>
-                                    <img src="img/chicken-leg.png" alt="chicken">
+                                    <img :src="Produit.image" alt="chicken">
                                 </figure>
-                                <span>Chicken leg</span>
-                                <p>-20%</p>
-                            </article>
-                            <article class="food ">
-                                <figure>
-                                    <img src="img/burger.png" alt="burger">
-                                </figure>
-                                <span>burger</span>
-                                <p>2.5 €</p>
-                            </article>
-                            <article class="food ">
-                                <figure>
-                                    <img src="img/burrito.png" alt="Burrito">
-                                </figure>
-                                <span>Burrito</span>
-                                <p>3 €</p>
-                            </article>
-                            <article class="food ">
-                                <figure>
-                                    <img src="img/bell-pepper.png" alt="bell pepper">
-                                </figure>
-                                <span>bell pepper</span>
-                                <p>4.35€</p>
-                            </article>
-                            <article class="food ">
-                                <figure>
-                                    <img src="img/french-fries.png" alt="french fries">
-                                </figure>
-                                <span>french fries</span>
-                                <p>1.50€</p>
-                            </article>
-                            <article class="food ">
-                                <figure>
-                                    <img src="img/hot-dog.png" alt="Hot Dog">
-                                </figure>
-                                <span>Hot Dog</span>
-                                <p>3.50€</p>
+                                <span>{{Produit.nom}}</span>
+                                <p>{{Produit.prix}}€</p>
                             </article>
                         </div>
                         <h2>Populaires</h2>
                         <div class="list-food populaire">
-                            <article class="food pop">
+                            <article 
+                            class="food pop"
+                            v-for="Produit in Populaires" :key="Produit.id">
                                 <figure>
-                                    <img src="img/pizza.png" alt="Pizza">
+                                    <img :src="Produit.image" :alt="Produit.nom">
                                 </figure>
-                                <span>Pizza</span>
-                                <p>6.50€</p>
-                            </article>
-                            <article class="food pop">
-                                <figure>
-                                    <img src="img/burger.png" alt="burger">
-                                </figure>
-                                <span>burger</span>
-                                <p>2.5 €</p>
-                            </article>
-                            <article class="food pop">
-                                <figure>
-                                    <img src="img/roast-chicken.png" alt="roast chicken">
-                                </figure>
-                                <span>roast chicken</span>
-                                <p>8 €</p>
-                            </article>
-                            <article class="food pop">
-                                <figure>
-                                    <img src="img/birthday-cake.png" alt="birthday cake">
-                                </figure>
-                                <span>birthday cake</span>
-                                <p>10€</p>
+                                <span>{{Produit.nom}}</span>
+                                <p>{{Produit.prix}}€</p>
                             </article>
                         </div>                        
                     </section>
@@ -153,4 +103,6 @@
             </section>
         </div>
     </body>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="app.js"></script>
 </html>

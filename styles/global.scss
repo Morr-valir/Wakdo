@@ -53,6 +53,7 @@ $colorbutton:#FFCA40;
     height: 100px;
     background:$colorarticle;
     text-align: center;
+    cursor: pointer;
     &.promo{
         background:$colorpromo;
         color: white;
