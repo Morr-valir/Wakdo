@@ -50,52 +50,30 @@
                     <section class="header-command">
                         <div class="btn"></div>
                     </section>
-                    <section class="content-command">
+                    <section class="content-command"v-if="total() > 0">
                         <h3><b>Ma</b><br>Commande</h3>
                         <button class="exit">Sortir</button>
                         <hr>
                         <section class="article-command">
-                            <article class="food">
-                                <figure>
-                                    <img src="img/pizza.png" alt="Pizza">
-                                </figure>
-                                <span>Pizza</span>
-                                <p>6.50€</p>
-                                <div class="quantity">
-                                    <button>-</button>
-                                    <p>1</p>
-                                    <button>+</button>
-                                </div>
-                            </article>
-                            <article class="food">
-                                <figure>
-                                    <img src="img/burger.png" alt="burger">
-                                </figure>
-                                <span>burger</span>
-                                <p>4.50€</p>
-                                <div class="quantity">
-                                    <button>-</button>
-                                    <p>2</p>
-                                    <button>+</button>
-                                </div>
-                            </article>
-                            <article class="food">
-                                <figure>
-                                    <img src="img/roast-chicken.png" alt="roast chicken">
-                                </figure>
-                                <span>roast chicken</span>
-                                <p>5.50€</p>
-                                <div class="quantity">
-                                    <button>-</button>
-                                    <p>11</p>
-                                    <button>+</button>
-                                </div>
-                            </article>
+                                <article class="food" v-for='Produit in Produits'>
+                                    <template v-if='Produit.active'>
+                                    <figure>
+                                        <img :src="Produit.image" alt="Pizza">
+                                    </figure>
+                                    <span>{{Produit.nom}}</span>
+                                    <p>{{Produit.prix}}€</p>
+                                    <div class="quantity">
+                                        <button @click.stop="Produit.quantite--" :disabled="Produit.quantite <=1">-</button>
+                                        <p>{{Produit.quantite}}</p>
+                                        <button @click.stop="Produit.quantite++">+</button>
+                                    </div>
+                                </template>
+                                </article>
                         </section>
                         <section class="total">
                             <hr>
                             <h4>Total de la commande</h4>
-                            <p>21€</p>
+                            <p>{{total()}}€</p>
                             <button>Valider</button>
                         </section>
                     </section>

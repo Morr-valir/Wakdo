@@ -6,6 +6,7 @@ Produits = [
         image:'img/bell-pepper.png',
         promotion:null,
         active: false,
+        quantite:1,
 
     },
     {
@@ -15,6 +16,8 @@ Produits = [
         image:'img/birthday-cake.png',
         promotion:null,
         active: false,
+        quantite:1,
+
     },
     {
         id:2,
@@ -23,6 +26,8 @@ Produits = [
         image:'img/burger.png',
         promotion:null,
         active: false,
+        quantite:1,
+
     },
     {
         id:3,
@@ -31,6 +36,8 @@ Produits = [
         image:'img/burrito.png',
         promotion:null,
         active: false,
+        quantite:1,
+
     },
     {
         id:4,
@@ -39,6 +46,8 @@ Produits = [
         image:'img/chicken-leg.png',
         promotion:null,
         active: false,
+        quantite:1,
+
     },
     {
         id:5,
@@ -47,6 +56,8 @@ Produits = [
         image:'img/french-fries.png',
         promotion:null,
         active: false,
+        quantite:1,
+
 
     },
     {
@@ -56,6 +67,8 @@ Produits = [
         image:'img/hot-dog.png',
         promotion:null,
         active: false,
+        quantite:1,
+
 
     },
     {
@@ -65,6 +78,8 @@ Produits = [
         image:'img/pizza.png',
         promotion:null,
         active: false,
+        quantite:1,
+
     },
     {
         id:8,
@@ -73,58 +88,29 @@ Produits = [
         image:'img/roast-chicken.png',
         promotion:null,
         active: false,
+        quantite:1,
+
 
     }
 ];
-Populaires = [
-    {
-        id:0,
-        nom:'Pizza',
-        prix:'6.50',
-        image:'img/pizza.png',
-        promotion:null,
-        active: false,
-        populaire:true,
-
-    },
-    {
-        id:1,
-        nom:'Poulet rôti',
-        prix:'9.50',
-        image:'img/roast-chicken.png',
-        promotion:null,
-        active: false,
-        populaire:true,
-    },
-    {
-        id:2,
-        nom:'burger',
-        prix:'2.50',
-        image:'img/burger.png',
-        promotion:null,
-        active: false,
-        populaire:true,
-    },
-    {
-        id:3,
-        nom:'Chicken leg',
-        prix:'1.50',
-        image:'img/chicken-leg.png',
-        promotion:null,
-        active: false,
-        populaire:true,
-    },
-]
 
 const wakdo = {
     data() {
         return {
             Produits : window.Produits,
-            Populaires :window.Populaires,
         }
     },
     methods:{
+        total: function(){
+            let total =0;
 
+            this.Produits.forEach(item => {
+                if (item.active){
+                    total += item.prix * item.quantite;
+                }
+            });
+            return total.toFixed(2);
+        }
     }
 
 };
