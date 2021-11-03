@@ -1,0 +1,12 @@
+                        <h2>Populaires</h2>
+                        <div class="list-food populaire">
+                            <article 
+                            class="food pop"
+                            v-for="Produit in Populaires.slice(0, 6)" :key="Produit.id">
+                                <figure>
+                                    <img :src="Produit.image" :alt="Produit.nom">
+                                </figure>
+                                <span>{{Produit.nom}}</span>
+                                <p>{{Produit.prix}}€</p>
+                            </article>
+                        </div>  

@@ -21,7 +21,7 @@
                         <h1><b>Hey,</b><br>Comment ça va ?</h1>
                         <div class="list-food">
                             <article class="food"
-                            v-for="(Produit,index) in Produits.slice(0, 6)":key="Produit.id"
+                            v-for="(Produit,index) in Produits":key="Produit.id"
                             :class="{promo : Produit.active}"
                             @click="Produit.active = !Produit.active"
                             >
@@ -31,19 +31,7 @@
                                 <span>{{Produit.nom}}</span>
                                 <p>{{Produit.prix}}€</p>
                             </article>
-                        </div>
-                        <h2>Populaires</h2>
-                        <div class="list-food populaire">
-                            <article 
-                            class="food pop"
-                            v-for="Produit in Populaires" :key="Produit.id">
-                                <figure>
-                                    <img :src="Produit.image" :alt="Produit.nom">
-                                </figure>
-                                <span>{{Produit.nom}}</span>
-                                <p>{{Produit.prix}}€</p>
-                            </article>
-                        </div>                        
+                        </div>                      
                     </section>
                 </main>
                 <aside class="command">
